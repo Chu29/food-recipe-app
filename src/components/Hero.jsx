@@ -3,11 +3,10 @@ import React from "react";
 const Hero = ({ email, setEmail, handleSubmit }) => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-r from-orange-500/10 to-red-500/10"></div>
       <div className="relative max-w-7xl mx-auto px-4 my-24 sm:py-32">
         <div className="text-center">
           <div className="flex justify-center mb-6">
-            <div className="text-7xl">🍳</div>
+            <div className="text-7xl"><img className="w-40 h-40" src="./hero.svg" alt="" /></div>
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-linear-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
             Discover Your Next Favorite Recipe
