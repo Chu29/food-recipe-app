@@ -22,3 +22,5 @@ export const SOCIAL_LINKS = [
     icon: Linkedin,
   },
 ];
+
+export const API_ENDPOINT = "https://dummyjson.com/recipes";
