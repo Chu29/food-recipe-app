@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { fetchRecipes } from "../services/recipes.service";
 
 const FoodContext = createContext();
@@ -7,12 +7,12 @@ const FoodContext = createContext();
 export const FoodContextProvider = ({ children }) => {
   const { data, isPending, isError } = useQuery({
     queryKey: ["foodData"],
-    queryFn: () => fetchRecipes(),
+    queryFn: fetchRecipes,
   });
 
   // create context value
   const contextValue = {
-    recipes: data,
+    data,
     isPending,
     isError,
   };
@@ -21,3 +21,5 @@ export const FoodContextProvider = ({ children }) => {
     <FoodContext.Provider value={contextValue}>{children}</FoodContext.Provider>
   );
 };
+
+export const useFoodContext = () => useContext(FoodContext);
