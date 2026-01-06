@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/LandingPage";
+import RecipesPage from "./pages/RecipesPage";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" Component={HomePage}></Route>
+        <Route path="/" Component={LandingPage}></Route>
+        <Route path="/recipes" Component={RecipesPage}></Route>
       </Routes>
     </BrowserRouter>
   );
