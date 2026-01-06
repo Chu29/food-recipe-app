@@ -11,12 +11,17 @@ const Footer = () => {
               key={index}
               className=" py-2 hover:border-t hover:border-b border-orange-300 flex items-center gap-1 "
             >
-              <a href={link.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-1 items-center font-bold "
+              >
                 {link.name}
+                <div className="p-1 bg-gray-800 rounded-lg">
+                  <Icon className="w-5 h-5 text-gray-400 hover:text-white transition-all duration-200" />
+                </div>
               </a>
-              <div className="p-1 bg-gray-800 rounded-lg">
-                <Icon className="w-5 h-5 text-gray-400 hover:text-white transition-all duration-200" />
-              </div>
             </li>
           );
         })}
