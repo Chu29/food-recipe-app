@@ -9,7 +9,7 @@ const Footer = () => {
           return (
             <li
               key={index}
-              className=" py-2 hover:border-t hover:border-b border-orange-300 flex items-center gap-1 "
+              className=" py-2 hover:border-t hover:border-b hover:transition-all border-orange-300 flex items-center gap-1 "
             >
               <a
                 href={link.url}
