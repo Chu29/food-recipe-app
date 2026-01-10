@@ -6,7 +6,7 @@ const Stats = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div>
-            <div className="text-5xl font-bold text-orange-400 mb-2">5K+</div>
+            <div className="text-5xl font-bold text-orange-400 mb-2">40+</div>
             <div className="text-gray-300">Recipes Available</div>
           </div>
           <div>
