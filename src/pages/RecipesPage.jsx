@@ -4,7 +4,7 @@ import NewMealBtn from "../components/NewMealBtn";
 import { useFoodContext } from "../context/FoodContext";
 
 const RecipesPage = () => {
-  const { data, isPending, isError } = useFoodContext();
+  const { foodData, isPending, isError } = useFoodContext();
 
   return (
     <>
@@ -26,7 +26,7 @@ const RecipesPage = () => {
       ) : (
         <>
           <div className="grid grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 max-w-7xl mx-auto">
-            {data.map((recipe) => (
+            {foodData.map((recipe) => (
               <FoodCard data={recipe} />
             ))}
           </div>

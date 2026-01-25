@@ -22,7 +22,7 @@ const LandingPage = () => {
         <Hero email={email} setEmail={setEmail} handleSubmit={handleSubmit} />
 
         {/* Features Section */}
-        <section className="min-h-screen max-w-7xl mx-auto px-4 py-20">
+        <section className="min-h-screen max-w-7xl mx-auto px-4 ">
           <h2 className="text-4xl font-bold text-center mb-16 bg-orange-500 bg-clip-text text-transparent">
             Everything You Need to Cook Better
           </h2>
