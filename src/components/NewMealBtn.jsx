@@ -1,10 +1,19 @@
 import { Plus } from "lucide-react";
 import React from "react";
+import { Button } from "./atoms";
 
-const NewMealBtn = () => {
+const NewMealBtn = ({ handleShowForm }) => {
   return (
-    <div className=" group ">
-      <Plus className="fixed bottom-8 right-8 w-16 h-16 bg-orange-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-orange-600 transition-colors duration-200 cursor-pointer" />
+    <div className="group">
+      <Button
+        type="button"
+        variant="floating"
+        size="floating"
+        onClick={handleShowForm}
+        aria-label="Add new meal"
+      >
+        <Plus />
+      </Button>
       {/* <span className=" absolute inset-0 group-hover:translate-y-0 ">
         Add Meal
       </span> */}

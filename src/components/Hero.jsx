@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, TextInput } from "./atoms";
 
 const Hero = ({ email, setEmail, handleSubmit }) => {
   return (
@@ -18,21 +19,17 @@ const Hero = ({ email, setEmail, handleSubmit }) => {
             favorites, and creating culinary masterpieces at home.
           </p>
           <form className="flex flex-wrap gap-3 max-w-lg mx-auto mb-4">
-            <input
+            <TextInput
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-0 flex-1 bg-gray-800 placeholder-gray-400"
             />
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              className="px-10 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-200 shadow-lg hover:shadow-xl flex-1"
-            >
+            <Button type="submit" onClick={handleSubmit} className="flex-1">
               Get Started
-            </button>
+            </Button>
           </form>
           {/* <p className="text-sm text-gray-400">
             No credit card required • Free forever

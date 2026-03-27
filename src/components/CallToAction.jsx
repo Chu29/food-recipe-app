@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "./atoms";
 
 const CallToAction = ({ handleSubmit }) => {
   return (
@@ -10,12 +11,13 @@ const CallToAction = ({ handleSubmit }) => {
         Start exploring thousands of recipes today. It's free and takes less
         than a minute.
       </p>
-      <button
+      <Button
         onClick={handleSubmit}
-        className="px-10 py-4 bg-orange-500 text-white text-lg font-semibold rounded-lg hover:bg-orange-600 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105"
+        size="lg"
+        className="shadow-xl hover:shadow-2xl hover:scale-105"
       >
         Start Cooking Now
-      </button>
+      </Button>
     </div>
   );
 };
