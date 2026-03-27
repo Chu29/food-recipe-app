@@ -1,37 +1,37 @@
-import { useQuery } from "@tanstack/react-query";
-import { createContext, useContext, useEffect } from "react";
-import { fetchRecipes } from "../services/recipes.service";
+import { useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-
-const FoodContext = createContext();
+import { FoodContext } from ".";
 
 export const FoodContextProvider = ({ children }) => {
-  const { data, isPending, isError } = useQuery({
-    queryKey: ["foodData"],
-    queryFn: () => fetchRecipes(),
-  });
+  // Persist user-created recipes in local storage.
+  const [foodData, setFoodData] = useLocalStorage("foodData", []);
 
-  // use local storage to persist data
-  const [foodData, setFoodData] = useLocalStorage("foodData", null);
+  const recipes = useMemo(
+    () => (Array.isArray(foodData) ? foodData : []), // checking if the passed var is an array - this is just for validation
+    [foodData],
+  );
 
-  // Sync API data to localStorage when it's received
-  useEffect(() => {
-    if (data && !isPending) {
-      setFoodData(data);
-    }
-  }, [data, isPending, setFoodData]);
+  const addRecipe = (recipePayload) => {
+    setFoodData((prev) => {
+      const currentRecipes = Array.isArray(prev) ? prev : [];
+      const nextId =
+        currentRecipes.length > 0
+          ? Math.max(
+              ...currentRecipes.map((recipe) => Number(recipe.id) || 0),
+            ) + 1 // return the last index and add 1 to it.
+          : 1;
+
+      return [{ ...recipePayload, id: nextId }, ...currentRecipes];
+    });
+  };
 
   // create context value
   const contextValue = {
-    foodData: foodData || data, // Use localStorage data if available, otherwise use API data
-    setFoodData,
-    isPending,
-    isError,
+    foodData: recipes,
+    addRecipe,
   };
 
   return (
     <FoodContext.Provider value={contextValue}>{children}</FoodContext.Provider>
   );
 };
-
-export const useFoodContext = () => useContext(FoodContext);
