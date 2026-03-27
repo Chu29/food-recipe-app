@@ -27,7 +27,7 @@ export const useLocalStorage = (key, initialValue) => {
   useEffect(() => {
     const handleStorageChange = () => {};
     if (event.key === key) {
-      setValue(getStoredValue());
+      getStoredValue();
     }
     window.addEventListener("storage", handleStorageChange);
 
