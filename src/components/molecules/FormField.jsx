@@ -1,9 +1,16 @@
-const FormField = ({ label, className = "", children }) => {
+const FormField = ({
+  label,
+  className = "",
+  labelClassName = "",
+  children,
+}) => {
   return (
-    <label
-      className={`mb-4 block text-sm font-medium text-gray-300 ${className}`.trim()}
-    >
-      {label}
+    <label className={`mb-4 block ${className}`.trim()}>
+      <span
+        className={`block text-sm font-medium text-gray-300 ${labelClassName}`.trim()}
+      >
+        {label}
+      </span>
       {children}
     </label>
   );
