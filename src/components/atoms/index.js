@@ -1,3 +1,5 @@
 export { default as Button } from "./Button";
 export { default as TextInput } from "./TextInput";
 export { default as TextArea } from "./TextArea";
+export { default as CarouselDot } from "./CarouselDot";
+export { default as MealMetaItem } from "./MealMetaItem";
