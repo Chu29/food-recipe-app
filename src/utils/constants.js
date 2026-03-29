@@ -10,7 +10,7 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     name: "Twitter",
-    url: "https://x.com/chu_codes",
+    url: "https://x.com/unku_chu",
     icon: Twitter,
   },
   {
