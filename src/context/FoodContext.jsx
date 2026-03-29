@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { FoodContext } from ".";
+import defaultRecipesData from "../data/Data.json";
 
 const toNumber = (value, fallback = 0) => {
   const numericValue = Number(value);
@@ -11,23 +12,38 @@ const normalizeRecipe = (recipe) => ({
   ...recipe,
   id: toNumber(recipe?.id),
   name: recipe?.name ?? "",
-  image: recipe?.image ?? recipe?.images?.[0] ?? "",
+  image:
+    recipe?.image ??
+    recipe?.images?.[0] ??
+    recipe?.img?.[toNumber(recipe?.imgIndx)] ??
+    recipe?.img?.[0] ??
+    "",
   images: Array.isArray(recipe?.images)
     ? recipe.images
-    : recipe?.image
-      ? [recipe.image]
-      : [],
+    : Array.isArray(recipe?.img)
+      ? recipe.img
+      : recipe?.image
+        ? [recipe.image]
+        : [],
   servings: toNumber(recipe?.servings),
   prepTimeMinutes: toNumber(recipe?.prepTimeMinutes),
   rating: toNumber(recipe?.rating),
-  ingredients: Array.isArray(recipe?.ingredients) ? recipe.ingredients : [],
+  ingredients: Array.isArray(recipe?.ingredients)
+    ? recipe.ingredients
+    : Array.isArray(recipe?.recipe)
+      ? recipe.recipe
+      : [],
   instructions: Array.isArray(recipe?.instructions) ? recipe.instructions : [],
   isFavorite: Boolean(recipe?.isFavorite ?? recipe?.fav),
 });
 
+const defaultRecipes = Array.isArray(defaultRecipesData)
+  ? defaultRecipesData.map((recipe) => normalizeRecipe(recipe))
+  : [];
+
 export const FoodContextProvider = ({ children }) => {
   // Persist user-created recipes in local storage.
-  const [foodData, setFoodData] = useLocalStorage("foodData", []);
+  const [foodData, setFoodData] = useLocalStorage("foodData", defaultRecipes);
 
   const recipes = useMemo(
     () =>
