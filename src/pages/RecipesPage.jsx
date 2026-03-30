@@ -5,10 +5,17 @@ import { RecipesLayout } from "../components/templates";
 import { useFoodContext } from "../hooks/useFoodContext";
 
 const RecipesPage = () => {
-  const { foodData, toggleFavorite, deleteRecipe } = useFoodContext();
+  const { foodData, toggleFavorite, deleteRecipe, searchRecipe } =
+    useFoodContext();
   const [showForm, setShowForm] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [selectedDetailRecipe, setSelectedDetailRecipe] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const normalizedSearchQuery = searchQuery.trim();
+  const recipesToRender = normalizedSearchQuery
+    ? searchRecipe(normalizedSearchQuery)
+    : foodData;
 
   const handleShowForm = () => {
     setSelectedRecipe(null);
@@ -42,18 +49,24 @@ const RecipesPage = () => {
       showForm={showForm}
       onToggleForm={showForm ? handleCloseForm : handleShowForm}
       recipeToEdit={selectedRecipe}
+      searchQuery={searchQuery}
+      onSearchQueryChange={setSearchQuery}
     >
       <main className="min-h-[calc(100vh-6rem)] bg-gray-900 text-gray-100 px-4 py-10">
-        {foodData.length === 0 ? (
+        {recipesToRender.length === 0 ? (
           <div className="mx-auto mt-16 w-[min(92%,42rem)] rounded-2xl border border-dashed border-gray-700 bg-gray-800/60 px-6 py-12 text-center">
-            <h2 className="text-2xl font-bold text-white">No recipes yet</h2>
+            <h2 className="text-2xl font-bold text-white">
+              {normalizedSearchQuery ? "No matching recipes" : "No recipes yet"}
+            </h2>
             <p className="mt-3 text-gray-400">
-              Start building your cookbook by adding your first meal.
+              {normalizedSearchQuery
+                ? "Try a different search term to find your meal."
+                : "Start building your cookbook by adding your first meal."}
             </p>
           </div>
         ) : (
           <div className="grid grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {foodData.map((recipe) => (
+            {recipesToRender.map((recipe) => (
               <RecipeCard
                 key={recipe.id}
                 data={recipe}
