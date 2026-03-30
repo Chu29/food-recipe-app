@@ -7,10 +7,15 @@ const RecipesLayout = ({
   showForm,
   onToggleForm,
   recipeToEdit = null,
+  searchQuery = "",
+  onSearchQueryChange = null,
 }) => {
   return (
     <>
-      <Header />
+      <Header
+        searchQuery={searchQuery}
+        onSearchQueryChange={onSearchQueryChange}
+      />
       {children}
       <NewMealBtn handleShowForm={onToggleForm} />
       {showForm && (
