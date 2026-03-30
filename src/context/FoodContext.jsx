@@ -103,6 +103,12 @@ export const FoodContextProvider = ({ children }) => {
     });
   };
 
+  const searchRecipe = (query) => {
+    return recipes.filter((recipe) =>
+      recipe.name.toLowerCase().includes(query.toLowerCase()),
+    );
+  };
+
   const toggleFavorite = (recipeId) => {
     setFoodData((prev) => {
       const currentRecipes = Array.isArray(prev) ? prev : [];
@@ -131,6 +137,7 @@ export const FoodContextProvider = ({ children }) => {
     updateRecipe,
     toggleFavorite,
     deleteRecipe,
+    searchRecipe,
   };
 
   return (
