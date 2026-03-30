@@ -48,7 +48,13 @@ const Header = ({ searchQuery = "", onSearchQueryChange = null }) => {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center justify-between md:hidden">
-          <button className="text-white" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="text-white"
+            aria-label={
+              isOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            onClick={() => setIsOpen((prevState) => !prevState)}
+          >
             <svg
               className="w-8 h-8 text-orange-500"
               fill="none"
@@ -74,10 +80,51 @@ const Header = ({ searchQuery = "", onSearchQueryChange = null }) => {
 
         {/* Mobile Menu Overlay */}
         {isOpen && (
-          <div
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-            onClick={() => setIsOpen(false)}
-          />
+          <>
+            <div
+              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+
+            <div className="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-700 shadow-2xl md:hidden">
+              <div className="mx-auto max-w-7xl px-4 py-6 space-y-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-bold text-white">Menu</span>
+                  <button
+                    className="text-orange-400 text-sm font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+
+                <nav>
+                  <ul className="space-y-3 list-none">
+                    {NAV_LINKS.map((link) => {
+                      return (
+                        <li key={link.to}>
+                          <Link
+                            to={link.to}
+                            onClick={() => setIsOpen(false)}
+                            className="block rounded-lg border border-gray-700 bg-gray-800 px-4 py-3 text-white font-semibold hover:border-orange-500 hover:text-orange-300 transition-colors duration-200"
+                          >
+                            {link.label}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </nav>
+
+                {shouldRenderSearch && (
+                  <SearchBar
+                    query={searchQuery}
+                    onQueryChange={onSearchQueryChange}
+                  />
+                )}
+              </div>
+            </div>
+          </>
         )}
       </div>
     </header>
