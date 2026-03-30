@@ -94,6 +94,15 @@ export const FoodContextProvider = ({ children }) => {
     });
   };
 
+  const deleteRecipe = (recipeId) => {
+    setFoodData((prev) => {
+      const currentRecipes = Array.isArray(prev) ? prev : [];
+      return currentRecipes.filter(
+        (recipe) => toNumber(recipe.id) !== toNumber(recipeId),
+      );
+    });
+  };
+
   const toggleFavorite = (recipeId) => {
     setFoodData((prev) => {
       const currentRecipes = Array.isArray(prev) ? prev : [];
@@ -121,6 +130,7 @@ export const FoodContextProvider = ({ children }) => {
     addRecipe,
     updateRecipe,
     toggleFavorite,
+    deleteRecipe,
   };
 
   return (

@@ -5,7 +5,7 @@ import { RecipesLayout } from "../components/templates";
 import { useFoodContext } from "../hooks/useFoodContext";
 
 const RecipesPage = () => {
-  const { foodData, toggleFavorite } = useFoodContext();
+  const { foodData, toggleFavorite, deleteRecipe } = useFoodContext();
   const [showForm, setShowForm] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [selectedDetailRecipe, setSelectedDetailRecipe] = useState(null);
@@ -33,6 +33,10 @@ const RecipesPage = () => {
     setSelectedDetailRecipe(null);
   };
 
+  const handleDeleteRecipe = (recipeId) => {
+    deleteRecipe(recipeId);
+  };
+
   return (
     <RecipesLayout
       showForm={showForm}
@@ -56,6 +60,7 @@ const RecipesPage = () => {
                 onToggleFavorite={toggleFavorite}
                 onEdit={handleEditRecipe}
                 onOpenDetails={handleOpenRecipeDetail}
+                onDelete={handleDeleteRecipe}
               />
             ))}
           </div>

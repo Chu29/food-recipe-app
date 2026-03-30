@@ -1,8 +1,15 @@
 import { useMemo, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Edit, Heart } from "lucide-react";
 import { RecipeMetaRow } from "../molecules";
+import { Trash2 } from "lucide-react";
 
-const RecipeCard = ({ data, onToggleFavorite, onEdit, onOpenDetails }) => {
+const RecipeCard = ({
+  data,
+  onToggleFavorite,
+  onEdit,
+  onOpenDetails,
+  onDelete,
+}) => {
   const { image, name, servings, prepTimeMinutes, rating, isFavorite } = data;
   const touchStartX = useRef(null);
 
@@ -155,6 +162,17 @@ const RecipeCard = ({ data, onToggleFavorite, onEdit, onOpenDetails }) => {
             aria-label="Edit recipe"
           >
             <Edit className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            className="z-10 w-10 h-10 bg-gray-900/70 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-300 hover:bg-gray-900 transition-all duration-200 cursor-pointer"
+            onClick={(event) => {
+              event.stopPropagation();
+              onDelete?.(data.id);
+            }}
+            aria-label="Delete recipe"
+          >
+            <Trash2 />
           </button>
         </div>
 
