@@ -1,9 +1,11 @@
 import { Link } from "react-router";
 import { NAV_LINKS } from "../utils/constants";
 import { useState } from "react";
+import SearchBar from "./molecules/SearchBar";
 
-const Header = () => {
+const Header = ({ searchQuery = "", onSearchQueryChange = null }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const shouldRenderSearch = typeof onSearchQueryChange === "function";
   // const buttonStyle =
   //   "px-4 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-200";
 
@@ -36,6 +38,12 @@ const Header = () => {
               })}
             </ul>
           </nav>
+          {shouldRenderSearch && (
+            <SearchBar
+              query={searchQuery}
+              onQueryChange={onSearchQueryChange}
+            />
+          )}
         </div>
 
         {/* Mobile Menu Button */}
