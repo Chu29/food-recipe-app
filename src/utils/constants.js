@@ -4,7 +4,7 @@ export const NAV_LINKS = [
     { to: "/", label: "Home" },
     { to: "/recipes", label: "Recipes" },
     { to: "/favorites", label: "Favorites" },
-    { to: "/community", label: "Community" },
+    // { to: "/community", label: "Community" },
   ];
 
 export const SOCIAL_LINKS = [
