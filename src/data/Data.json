@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Rice & Beans",
+    "img": [
+      "https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2017/06/African-Stewed-Beans-and-rice.jpg?resize=1024%2C1024&ssl=1",
+      "https://cdn.shopify.com/s/files/1/0085/8711/6608/articles/black_beans_1170x.png?v=1616477531",
+      "https://www.365daysofcrockpot.com/wp-content/uploads/2016/11/slow-cooker-pinto-beans-and-rice-.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": [
+      "A pan full of beans",
+      "About 2kg Rice",
+      "Spicies like, ginger, garlic, onions, tomatoes(if u want), green beans, Cray fish",
+      "about 3/4 a liter of oil, Maggi and salts",
+      "garri also goes well with groundnut and or milk"
+    ],
+    "description": "a tasty rice-beans combo like no other",
+    "fav": false,
+    "id": 0
+  },
+  {
+    "name": "Khahti Khahti",
+    "img": [
+      "https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2019/06/kati-kati-cameroon.jpg?resize=1200%2C900&ssl=1",
+      "https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2019/06/kati-kati-spicy-cameroon-chicken.jpg?resize=683%2C1024&ssl=1",
+      "https://i.pinimg.com/736x/cf/05/4b/cf054b420104961df7561a179e4ea193.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "Oil", "Maggi", "Salt", "corn fufu", "fire"],
+    "description": "Bad dope",
+    "fav": false,
+    "id": 1
+  },
+  {
+    "name": "Ndole",
+    "img": [
+      "https://i.pinimg.com/originals/6d/e7/9c/6de79cb3e00b1eba9e36b945f8fc91b1.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5e04d1c138bd0a5d714cea2b/1615411039884-HLYF8GGIP67LFLCYN21D/Ndole-cameroon+cuisine-kengs+kitchen2.jpg?format=1000w",
+      "https://images.squarespace-cdn.com/content/v1/5e04d1c138bd0a5d714cea2b/1615411039867-R1Y8B1Q6RSZV6MZFQ3PX/Ndole-cameroon+cuisine-kengs+kitchen3.jpg?format=1000w"
+    ],
+    "imgIndx": 0,
+    "recipe": ["bitter leaf", "ion know the rest of the sup"],
+    "description": "it's good",
+    "fav": false,
+    "id": 2
+  },
+  {
+    "name": "water Fufu & Erru",
+    "img": [
+      "https://pbs.twimg.com/media/ELbN_DhWkAcsiOo.jpg",
+      "https://cdn.shopify.com/s/files/1/0409/7484/4060/articles/86E207EF-1F88-4281-92F1-E08AD28C2E76_1000x.webp?v=1681512131"
+    ],
+    "imgIndx": 0,
+    "recipe": [
+      "cook water fufu",
+      "Eru",
+      "Biff, dry fish, cray fish",
+      "complete the this list.."
+    ],
+    "description": "Only life and joy",
+    "fav": false,
+    "id": 3
+  },
+  {
+    "name": "Koki",
+    "img": [
+      "https://pbs.twimg.com/media/FHrh8-jX0AUXJ48.jpg",
+      "https://sawagrill.com/wp-content/uploads/2022/06/rdd-07-scaled.webp",
+      "https://i.pinimg.com/736x/4a/dd/80/4add8058361bf39aa3fbaf7f2ddfa969.jpg",
+      "https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2018/03/IMG_4526.jpg?ssl=1"
+    ],
+    "imgIndx": 0,
+    "recipe": ["you complete it..."],
+    "description": "Koki is feh divine",
+    "fav": false,
+    "id": 4
+  },
+  {
+    "name": "Achu",
+    "img": [
+      "https://medmunch.com/wp-content/uploads/2020/10/Achu-768x511.jpg",
+      "https://i.ytimg.com/vi/g3lQl0wTBDQ/maxresdefault.jpg",
+      "https://magazine.fabafriq.com/content/images/2021/10/achu.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["you complete it..."],
+    "description": "Its good",
+    "fav": false,
+    "id": 5
+  },
+
+  {
+    "name": "Peanut & Green Stew",
+    "img": [
+      "https://production-media.gousto.co.uk/cms/mood-image/3182_Cameroonian-style-Squash-Peanut--Greens-Stew-1616-1602061428116.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "Classy and delicious",
+    "fav": false,
+    "id": 6
+  },
+  {
+    "name": "Fufu x Njama Njama",
+    "img": [
+      "https://www.africanbites.com/wp-content/uploads/2014/07/IMG_3488.jpg",
+      "https://africanbites.com/wp-content/uploads/2014/07/IMG_3573-2.jpg",
+      "https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2019/06/kati-kati-chicken-with-turnip-greens.jpg?resize=695%2C1024&ssl=1"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "There Is Joy",
+    "fav": false,
+    "id": 7
+  },
+  {
+    "name": "Fried plantain",
+    "img": [
+      "https://seeafricatoday.com/wp-content/uploads/2022/10/Sweet-fried-plantains.jpg",
+      "https://static01.nyt.com/images/2019/06/26/dining/24Nigerianrex6/24Nigerianrex6-articleLarge.jpg",
+      "https://www.themidwestkitchenblog.com/wp-content/uploads/2022/12/jollof-rice-and-plantains.jpg",
+      "https://foodienotachef.com/wp-content/uploads/2021/02/ovengrilledtilapifried-1.png"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "sweet and tasty",
+    "fav": false,
+    "id": 8
+  },
+  {
+    "name": "Poulet DG",
+    "img": [
+      "https://ourquickbytes.files.wordpress.com/2016/07/cameroonian-poulet-dg.jpg?resize=3000%2C3000",
+      "https://i.pinimg.com/736x/32/b0/a3/32b0a3c6ade3b4740eddb24571fa6ffc.jpg",
+      "https://i0.wp.com/africa-cuisine.com/wp-content/uploads/2022/02/Poulet-Directeur-Ge%CC%81ne%CC%81ral.jpg?fit=1125%2C1104&ssl=1"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "sweet and tasty, everything you need",
+    "fav": false,
+    "id": 9
+  },
+  {
+    "name": "Vegetable salad",
+    "img": [
+      "https://i2.wp.com/reluctantentertainer.com/wp-content/uploads/2020/08/delish-Shrimp-Cobb-Salad-Board.jpg",
+      "https://www.preciouscore.com/wp-content/uploads/2017/06/cameroonian-vegetable-salad.jpg",
+      "https://img-global.cpcdn.com/recipes/30b7346ccbc5809e/1200x630cq70/photo.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "a beautiful and very healthy mix of fruits in a well thought out way",
+    "fav": false,
+    "id": 10
+  },
+  {
+    "name": "Jollof Rice",
+    "img": [
+      "https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2017/07/Baked-Jollof-Rice.jpg?ssl=1",
+      "https://flawlessfood.co.uk/wp-content/uploads/2023/01/Jollof-Rice-04-500x375.jpg",
+      "https://i1.wp.com/www.laquein.com/wp-content/uploads/2019/10/FA6C9F88-8BCC-4140-ABB1-CA339A9C1599.jpeg?fit=1024%2C993&ssl=1"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "What's a food list without this delicacy. This is probably the top most heard of African food",
+    "fav": false,
+    "id": 11
+  },
+  {
+    "name": "Jollof Spaghetti",
+    "img": [
+      "https://i0.wp.com/www.yummymedley.com/wp-content/uploads/2017/05/jollof-spaghetti-overhead.jpg?resize=750%2C1125&ssl=1",
+      "https://www.yummymedley.com/wp-content/uploads/2017/05/jollof-spaghetti.jpg",
+      "https://dooneyskitchen.com/wp-content/uploads/2021/05/64839867_360671391235811_6748480636979415559_n-1.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "Classy and delicious",
+    "fav": false,
+    "id": 12
+  },
+  {
+    "name": "Potatoe: Hot pot",
+    "img": [
+      "https://1.bp.blogspot.com/-sRU9Inzb6uU/V4esWFllsYI/AAAAAAAAFRo/h58KUBH0oyI5FPlnd6Z5Sa7uFOY4tSa8gCLcB/s1600/Potato%2BHotpot%2Brecipe%2BCameroon.jpg",
+      "https://cheflolaskitchen.com/wp-content/uploads/2021/02/DSC0299-Hot-Pot-Potatoes-Jan-17-2021-Hot-pot-potatoes-683x1024.jpg.webp",
+      "https://i.pinimg.com/736x/3f/78/f0/3f78f0c520ba40e0a6f0243112ea46bb--girl-body-one-pot-dishes.jpg",
+      "https://cheflolaskitchen.com/wp-content/uploads/2021/02/DSC0290-Hot-Pot-Potatoes-Jan-17-2021-Hot-pot-potatoes-683x1024.jpg.webp"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "Classy and delicious",
+    "fav": false,
+    "id": 13
+  },
+  {
+    "name": "Corn x Plum",
+    "img": [
+      "https://www.localguidesconnect.com/t5/image/serverpage/image-id/985073iEE6738B9A55C1E52?v=v2",
+      "https://abujafooddeliverymart.com/wp-content/uploads/2020/08/CornandPear.jpg",
+      "https://www.kelianfood.com/wp-content/uploads/2021/02/maisgrille.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "you understand??¿¿ 😂",
+    "fav": false,
+    "id": 14
+  },
+  {
+    "name": "Soya",
+    "img": [
+      "https://media-cdn.tripadvisor.com/media/photo-s/09/db/e0/92/special-rotisserie-soya.jpg",
+      "https://jewcanque.com/wp-content/uploads/2022/08/FullSizeRender-2-scaled.jpg",
+      "https://www.internationalcuisine.com/wp-content/uploads/2014/11/Cameroon-Suya-1024x685.jpg",
+      "https://davidcarr.us/wp/wp-content/uploads/2021-02-05-soya-meat-cameroon.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3"],
+    "description": "spicy and sliced roasted beef, sliced and bundled together small fine sticks, or metal",
+    "fav": false,
+    "id": 15
+  },
+  {
+    "name": "Dougnuts",
+    "img": [
+      "https://inbloombakery.com/wp-content/uploads/2022/09/Cinnamon-Donuts-15.jpg",
+      "https://inbloombakery.com/wp-content/uploads/2022/09/Cinnamon-Donuts-13.jpg",
+      "https://foodhub.scene7.com/is/image/woolworthsltdprod/1904-classic-doughnuts:Mobile-1300x1150",
+      "https://www.vegrecipesofindia.com/wp-content/uploads/2022/01/donut-recipe.jpg"
+    ],
+    "imgIndx": 0,
+    "recipe": ["step 1", "step 2", "step 3", "ect"],
+    "description": "Bad dope, and Attractive",
+    "fav": false,
+    "id": 16
+  }
+]
